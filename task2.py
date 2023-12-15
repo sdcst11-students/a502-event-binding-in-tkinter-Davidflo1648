@@ -11,15 +11,15 @@ from tkinter import Tk, Label, Entry, Button, StringVar
 
 win=Tk()
 win.title('Hypotenuse Calculator')
-win.geometry('550x100')
+win.geometry('600x150')
 
 hyp = StringVar()
 hyp.set('Hypotenuse')
 
 def hyp_calc():
-    side1 = side1_entry.get()
-    side2 = side2_entry.get()
-    hyp.set(math.hypot(side1,side2))
+    side1 = float(side1_entry.get())
+    side2 = float(side2_entry.get())
+    hyp.set(round(math.hypot(side1,side2)))
 
 instruction_label = Label(win,text='Only for Right Triangles!')
 side1_label = Label(win,text='Enter side:')
